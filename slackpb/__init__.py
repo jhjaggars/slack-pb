@@ -68,7 +68,7 @@ def paste(filename, token=read_file(TOKEN_FILE), filetype="auto", channels=None,
     print(resp.json()["file"]["permalink"])
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--channels", nargs="*", default=None)
     parser.add_argument("--filetype", default="auto")
@@ -78,3 +78,6 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     paste(args.file, filetype=args.filetype, channels=args.channels, filename_override=args.filename)
+
+if __name__ == "__main__":
+    main()
