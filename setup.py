@@ -11,6 +11,6 @@ if __name__ == "__main__":
         version="0.1",
         description="Slack Paster (file uploader)",
         packages=find_packages(),
-        install_requires=["requests"],
+        install_requires=["setuptools", "requests"],
         entry_points=entry_points,
     )
