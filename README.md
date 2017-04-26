@@ -17,7 +17,14 @@ Will send the contents of `filename` to slack. You can share it with a channel
 or user with the `--channels` option.
 
 ```
-pb.py <filename> --channels #my_channel,frank
+pb.py <filename> --channels #my_channel frank
+```
+
+If you want to use options and place the file at the end of the command you can
+do that too:
+
+```
+pb.py --channels #jokes bob -- <filename>
 ```
 
 The above will share the upload with `#my_channel` and `frank`
