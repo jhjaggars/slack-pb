@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 
+from __future__ import absolute_import, division, print_function
 import json
 import requests
 import sys
 import os
 import argparse
+
 
 API_BASE = "https://slack.com/api/"
 UPLOAD_URL = "%s/files.upload" % API_BASE
@@ -63,7 +65,7 @@ def paste(filename, token=read_file(TOKEN_FILE), filetype="auto", channels=None,
         payload["channels"] = ",".join(replace_channel(c) for c in channels)
 
     resp = requests.post(UPLOAD_URL, data=payload)
-    print resp.json()["file"]["permalink"]
+    print(resp.json()["file"]["permalink"])
 
 
 if __name__ == "__main__":
