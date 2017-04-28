@@ -70,7 +70,7 @@ def paste(filename, token=read_file(TOKEN_FILE), filetype="auto", channels=None,
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--channels", nargs="*", default=None)
+    parser.add_argument("-c", "--channels", nargs="*", default=None)
     parser.add_argument("--filetype", default="auto")
     parser.add_argument("--filename", default=None)
     parser.add_argument("file")
